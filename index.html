@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>To DO List</title>
 </head>
-<body>
-    <a href="#" title="Добавить задачу">+ Добавить задачу</a>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis animi odit distinctio vero odio omnis explicabo quos quidem vitae repellat. Laudantium doloremque nostrum aut illum quis obcaecati beatae repudiandae consequatur!</p>
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis animi odit distinctio vero odio omnis explicabo quos quidem vitae repellat. Laudantium doloremque nostrum aut illum quis obcaecati beatae repudiandae consequatur!</p>
+<body>
+    <!-- Сюда вставляем задачи -->
+    <ul id="tdl" class="list"></ul>
+
+    <!-- Форма добавления -->
+    <div class="form">
+        <form id="form">
+            <input type="text" name="" id="task" placeholder="Текст задачи">
+            <input id="added" type="submit" value="Добавить">
+        </form>
+    </div>
+
+    <!-- Кнопка вызова формы -->
+    <a href="#" id="show_form" title="Добавить задачу">+ Добавить задачу</a>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
