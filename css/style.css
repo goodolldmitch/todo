@@ -11,3 +11,6 @@ body{
 #form{
     display: none;
 }
+.list{
+    list-style: none;
+}
