@@ -12,7 +12,9 @@ form.onsubmit = function(){
     
     var taskLine = document.createElement('li'); // создаем элемент списка    
 
-    taskLine.innerHTML = '<input type="checkbox" class="check">' + task + '<span class="delete">&times;</span>'; // вставляем в элемент списка значение из поля формы
+    var date = document.getElementById('date').value; // берем значение из поля
+
+    taskLine.innerHTML = '<input type="checkbox" class="check">' + task + '<span class="deadline">' + date + '</span> <span class="delete">&times;</span>' ; // вставляем в элемент списка значение из поля формы
 
     if(task != ""){ // если поле формы было заполнено
         tdl.append(taskLine); // вставляем элемент в список
@@ -30,18 +32,19 @@ tdl.onclick = function(){ // нажимаем на строку списка и 
     var clickedInnerItem = event.target; // получаем элемент по которому сделан клик
 
     var clickedInnerItemClass = event.target.className; // получаем класс кликнутого элемента
-    
-    if (clickedInnerItemClass == 'delete'){ // если клик по классу delete
 
-        var clickedInnerItemParent = clickedInnerItem.parentNode; // определяем родительский элемент
+    var clickedInnerItemParent = clickedInnerItem.parentNode; // определяем родительский элемент
+    
+    if (clickedInnerItemClass == 'delete'){ // если клик по классу delete        
 
         clickedInnerItemParent.remove(); // удаляем родителя
     }
-    else if(clickedInnerItemClass == 'check'){
-        alert('done');
+    else if(clickedInnerItemClass == 'check'){ // если клик по чекбоксу (проверить чекнут ли чекбокс)
+
+        clickedInnerItemParent.classList.add('done'); // добавляем класс о готовности
     }
     else{
-        alert('edit');
+        alert('edit'); // реализовать редактирование
     }
 };
 

@@ -9,20 +9,24 @@
 </head>
 
 <body>
-    <!-- Сюда вставляем задачи -->
-    <ul id="tdl" class="list"></ul>
+    <div class="wrap">
+        <!-- Сюда вставляем задачи -->
+        <ul id="tdl" class="list"></ul>
 
-    <!-- Форма добавления -->
-    <div class="form">
-        <form id="form">
-            <input type="text" name="" id="task" placeholder="Текст задачи">
-            <input id="added" type="submit" value="Добавить">
-        </form>
+        <hr>
+
+        <!-- Форма добавления -->
+        <div class="form">
+            <form id="form">
+                <input type="text" name="" id="task" placeholder="Текст задачи">
+                <input type="date" name="" id="date">
+                <input id="added" type="submit" value="Добавить">
+            </form>
+        </div>
+
+        <!-- Кнопка вызова формы -->
+        <a href="#" id="show_form" title="Добавить задачу">+ Добавить задачу</a>
     </div>
-
-    <!-- Кнопка вызова формы -->
-    <a href="#" id="show_form" title="Добавить задачу">+ Добавить задачу</a>
-
     <script src="js/main.js"></script>
 </body>
 
